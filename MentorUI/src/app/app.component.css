@@ -1,0 +1,19 @@
+body{
+    /* background-color:#4d568a; */
+    background-color: black;
+    color: white;
+    height: 660px;
+    width:700px;
+    border-radius: 5px 180px 180px 5px
+
+}
+nav{
+    color:white;
+    padding-left: 2%;
+}
+.nav-link{
+    color: black;
+    padding-bottom: 2%;
+    font-family: 'Calistoga', cursive;
+    font-size: 110%;
+}

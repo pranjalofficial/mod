@@ -1,0 +1,28 @@
+<div class="container h-100">
+      <div class="d-flex justify-content-center h-100">
+        <div class="searchbar">
+            <label style="color:white;">Search By Technology</label>
+          <input class="search_input" type="text" name="" placeholder="Search..." [(ngModel)]="search">
+          <a href="#" class="search_icon"><i class="fas fa-search"></i></a>
+        </div>
+      </div>
+
+    
+            <div class="col-auto my-1" *ngFor="let items of mentor | searchskill:search" id="appoContainer" style="color: black;">
+              <div class="card" id="mentor-List">
+                <span>Trainer Email ID: <span class="badge badge-light">{{items.meUsername}}</span></span>
+                <span>Experience(Years): {{items.meYearsOfExperience}}</span>
+                <span>Rating <i class="material-icons">
+                  star_border
+                  </i> : {{items.msSelfRating}}</span>
+                <span>Training Delivered: <span class="badge badge-light">{{items.msTrainingDelivered}}</span></span>
+                <span>Technology <i class="material-icons">
+                  computer
+                  </i> : {{items.skName}}</span>
+                <span>Duration (Hours) <i class="material-icons">
+                  hourglass_empty
+                  </i> : {{items.skDuration}}<button type="button" class="btn btn-light" id="nominate-Btn" (click)=nominate(items.meId,items.skId,_authService.fetchUserDetails.usId)>Nominate</button></span>
+              </div>  
+            </div>
+    </div>
+    <notifier-container></notifier-container>

@@ -1,0 +1,155 @@
+h2{
+    font-family: 'Tomorrow', sans-serif;
+}
+.container{
+    height: 420px;
+    width:500px;
+    color: black;}
+.card{
+    top:130px;
+    left:180px;
+    height:100%;
+    width:100%;
+    padding-left: 20%;
+    padding-top:4%;
+    padding-bottom: 4%;
+    font-size:17px;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+}
+label{
+    font-family: 'Bebas Neue', cursive;
+}
+input{
+   width: 130%; 
+   box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+}
+input:focus {
+    border: 3px solid #555;
+  }
+
+  
+  .box select {
+    color: black;
+    padding: 12px;
+    width: 230px;
+    border: none;
+    font-size: 18px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+    -webkit-appearance: button;
+    appearance: button;
+    outline: none;
+  }
+  
+  .box::before {
+    content: "\f13a";
+    font-family: FontAwesome;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20%;
+    height: 100%;
+    text-align: center;
+    font-size: 28px;
+    line-height: 45px;
+    color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.1);
+    pointer-events: none;
+  }
+  
+  .box:hover::before {
+    color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  .box select option {
+    padding: 30px;
+  }
+
+#content{
+    font-family: 'Tomorrow', sans-serif;
+    color: black;
+}
+
+    /* ANIMATIONS */
+  
+  /* Simple CSS3 Fade-in-down Animation */
+  .fadeInDown {
+    animation-name: fadeInDown;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    }
+    
+    @-webkit-keyframes fadeInDown {
+    0% {
+      opacity: 0;
+      transform: translate3d(0, -100%, 0);
+    }
+    100% {
+      opacity: 1;
+      transform: none;
+    }
+    }
+    
+    @keyframes fadeInDown {
+    0% {
+      opacity: 0;   
+      transform: translate3d(0, -100%, 0);
+    }
+    100% {
+      opacity: 1;
+      transform: none;
+    }
+    }
+    
+    /* Simple CSS3 Fade-in Animation */
+    
+    @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+    
+    .fadeIn {
+    opacity:0;
+    animation:fadeIn ease-in 1;
+    animation-fill-mode:forwards;
+    animation-duration:1s;
+    }
+    
+    .fadeIn.first {
+    
+    animation-delay: 0.4s;
+    }
+    
+    .fadeIn.second {
+    
+    animation-delay: 0.6s;
+    }
+    
+    .fadeIn.third {
+    animation-delay: 0.8s;
+    }
+    
+    .fadeIn.fourth {
+    
+    animation-delay: 1s;
+    }
+    
+    /* Simple CSS3 Fade-in Animation */
+    .underlineHover:after {
+    display: block;
+    left: 0;
+    bottom: -10px;
+    width: 0;
+    height: 2px;
+    background-color: #56baed;
+    content: "";
+    transition: width 0.2s;
+    }
+    
+    .underlineHover:hover {
+    color: #0d0d0d;
+    }
+    
+    .underlineHover:hover:after{
+    width: 100%;
+    }
+    
+    
+  

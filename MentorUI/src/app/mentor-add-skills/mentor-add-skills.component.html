@@ -1,0 +1,29 @@
+<div class="wrapper fadeInDown" style="margin-top: 45px;">
+    <form (ngSubmit)="onSubmit()">
+        <h2>Add Skills</h2>
+        <label>Select Skills</label>
+        <div class="form-group">
+                    <select [(ngModel)]="temp" name="tech" id="tech" #tech="ngModel">
+                        <option *ngFor="let items of skillDropDown" [value]="items.skId"  >{{items.skName}}</option>
+                    </select>
+            </div>
+        <label>Rate YourSelf:</label> 
+        <div class="form-group"> 
+        <input type="number" name="rate" id="rate" [(ngModel)]="skillsList.msSelfRating" class="form-control"  #rate="ngModel" required/>
+        </div>
+        <label>Years Of Experience</label>
+        <div class="form-group">
+                <input type="number" name="exp" id="exp" [(ngModel)]="skillsList.msYearsOfExperience" class="form-control"  #exp="ngModel" required/>
+        </div>
+        <label>Trainning Delivered</label>
+        <div class="form-group">
+            <input type="number" name="tra" id="tra" [(ngModel)]="skillsList.msTrainingDelivered" class="form-control" #tra="ngModel" required/>
+        </div>
+        <label>Facilities Provided</label>
+        <div class="form-group">
+            <input type="text" name="fac" id="fac"  [(ngModel)]="skillsList.msFacilitiesOffered" class="form-control" #fac="ngModel" required/>
+        </div>
+        <input type="submit" class="btn btn-dark" value="Login">
+    </form>
+</div>
+<notifier-container></notifier-container>

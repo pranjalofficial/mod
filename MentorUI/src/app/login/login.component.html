@@ -1,0 +1,50 @@
+<!-- Login Component Container -->
+<div class="wrapper fadeInDown" style="margin-top: 40px;">
+<div class="container">
+    <div class="card">
+        <div class="row">
+            <form (ngSubmit)="onSubmit(username.value,password.value,role.value)">
+                <h2>Login</h2>
+                <label>Username/Email ID:</label>
+                <div class="form-group">
+                    <input type="text" name="username" id="username" class="form-control" ngModel  #username="ngModel" required/>
+                    <div *ngIf="username.invalid && (username.dirty || username.touched)"
+                    >
+                  <div *ngIf="username.errors.required" style="font-size: small; color: red;">
+                    Name is required.
+                  </div>
+                </div>
+                </div>
+                <label>Password:</label>
+                <div class="form-group">
+                    <input type="password" name="password" id="password" [value]="" class="form-control" ngModel #password="ngModel" required/>
+                </div>
+                <div *ngIf="password.invalid && (password.dirty || password.touched)"
+                >
+            
+              <div *ngIf="password.errors.required" style="font-size: small; color: red;">
+                Password is required.
+              </div>
+            </div>
+                <label>Select Role:</label>
+                <div class="form-group">
+                    <div class="box">
+                        <select #role>
+                            <option value="user">User</option>
+                            <option value="mentor">Mentor</option>
+                            <option value="admin">Admin</option>
+                        </select>
+                </div>
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="btn btn-dark" value="Login">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+<notifier-container></notifier-container>
+<!-- Login Component End -->
+
+

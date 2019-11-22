@@ -1,0 +1,17 @@
+     <div class="card overflow-auto" id ="list-container">
+         <h2 style="color:black">Nominations List</h2>
+         <div class="col-auto my-1" *ngFor="let items of nomination" id="appoContainer" style="color: black;">
+            <div class="card" id="mentor-List">
+                 <span>Trainer ID: <span class="badge badge-light">{{items.trId}}</span></span>
+                 <span>User Name: {{items.usFirstName}} {{items.usLastName}}</span>
+                 <span>Technology <i class="material-icons">
+                        computer
+                        </i> : {{items.skName}}
+                </span>
+                 <span>Duration (Hours) <i class="material-icons">
+                        hourglass_empty
+                        </i> : {{items.skDuration}}
+                </span>
+            </div>  
+        </div>
+    </div>

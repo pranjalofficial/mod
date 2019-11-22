@@ -1,0 +1,52 @@
+<body>
+    <nav class="navbar fixed-top">
+      <ul class="navbar nav">
+        <a class="navbar-brand">
+            <i class="material-icons">
+              class
+            </i>
+            Mentor On Demand
+          </a>
+          <li class="nav-item" *ngIf="(_authService.loggedIn)">
+          <a class="nav-link" style="color:white;" href="_authService.logOut" *ngIf="(_authService.fetchMentorDetails != null)" >
+              <i class="material-icons" style="color: white;">
+                  account_circle
+                  </i>
+                  {{_authService.fetchMentorDetails.meUsername}}
+                </a>
+              </li>
+              <li class="nav-item" *ngIf="(_authService.loggedIn)">
+                  <a class="nav-link" style="color:white;" [routerLink]="['add-skills']" *ngIf="(_authService.fetchMentorDetails != null)" >
+                          Add Skills
+                        </a>
+                      </li>     
+        </ul>
+        <ul class="navbar-nav">
+          <li class="nav-item" *ngIf="(_authService.loggedIn)">
+            <a class="nav-link" style="color:black;" href="_authService.logOut" *ngIf="(_authService.fetchUserDetails != null)" >
+                <i class="material-icons">
+                    account_circle
+                    </i>
+                    {{_authService.fetchUserDetails.usLastName}},{{_authService.fetchUserDetails.usFirstName}}
+                  </a>
+          </li>
+          <li class="nav-item" *ngIf="(_authService.loggedIn != true)">
+            <a class="nav-link" style="color:black;" [routerLink]="[('Login')]">
+                <i class="material-icons">
+                    account_circle
+                    </i>
+                    Login
+                  </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['Registration']" *ngIf="(_authService.loggedIn != true)">
+                <i class="material-icons">
+                  how_to_reg
+                  </i>
+                  Register
+                </a>
+          </li>
+        </ul>
+      </nav>
+      <router-outlet></router-outlet>
+</body>
